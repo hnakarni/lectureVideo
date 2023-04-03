@@ -1,0 +1,31 @@
+
+<form>
+    <input type="text" name="search" />
+    <input type="submit" value="searching" />
+</form>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Contact</td>
+        <td>Password</td>
+        <td>ACTION</td>
+    </tr>
+    <% for(var d of record){ %>
+    <tr>
+        <td><%= d.name %></td>
+        <td><%= d.name %></td>
+        <td><%= d.name %></td>
+        <td>Delete</td>
+    </tr>
+    <% } %>
+
+    <tr>
+        <td colspan="3">
+            <% for(var j=1; j<=countrecord; j++){%>
+            <a href="?page=<%= j %>&search=<%= searchData %>"><%= j %></a>
+            <% } %>
+        </td>
+    </tr>
+
+    
+</table>

@@ -1,0 +1,42 @@
+<form action="/insertdata" method="post" enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+            <td>Enter Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Contact</td>
+            <td><input type="text" name="contact"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Password</td>
+            <td><input type="text" name="password"></td>
+        </tr>
+
+        <tr>
+            <td>Enter Confirm Password</td>
+            <td><input type="text" name="cpassword"></td>
+        </tr>
+
+        <tr>
+            <td>upload image</td>
+            <td><input type="file" name="avatar"></td>
+        </tr>
+
+        <tr>
+            <td>upload Multiple image</td>
+            <td><input type="file" name="images" multiple></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Register" ></td>
+        </tr>
+    </table>
+</form>
+
+<a href="/view_record">View</a> || <a href="/view_record_custom">Custom View</a>
+
+<a href="/login">Login</a>
