@@ -3,11 +3,21 @@ const express = require('express');
 
 const port = 8001;
 
+const mongoose = require('mongoose');
+
+mongoose.connect("mongodb+srv://rnwdevmansikakani:rnwMansikikani@cluster0.9j5egwl.mongodb.net/HomeCrud", {
+    useNewUrlParser : true,
+    useUnifiedTopology : true
+}).then(()=>{
+    console.log("db connected");
+})
+.catch((err)=>{
+    console.log(err);
+})
+
 const app = express();
 
 const path = require('path');
-
-const db = require('./config/mongoose');
 
 const multer = require('multer');
 
