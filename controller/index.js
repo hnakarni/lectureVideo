@@ -28,22 +28,22 @@ module.exports.checkLoginData = async (req,res)=>{
 
 
 module.exports.insertdata = (req,res) =>{
-    console.log(req.files.avatar);
+    // console.log(req.files.avatar);
 
-    console.log(req.files.images);
+    // console.log(req.files.images);
     
-    // let avatarP = Admin.AVATAR_PATH+"/"+req.file.filename;
-    // Admin.create({
-    //     name : req.body.name,
-    //     contact : req.body.contact,
-    //     password : req.body.password,
-    //     avatar : avatarP
-    // }).then((response)=>{
-    //     return res.redirect('/');
-    // }).catch((err)=>{
-    //     console.log("something wrong!! Query is not working")
-    //     console.log(err);
-    // })
+    let avatarP = Admin.AVATAR_PATH+"/"+req.file.filename;
+    Admin.create({
+        name : req.body.name,
+        contact : req.body.contact,
+        password : req.body.password,
+        avatar : avatarP
+    }).then((response)=>{
+        return res.redirect('/');
+    }).catch((err)=>{
+        console.log("something wrong!! Query is not working")
+        console.log(err);
+    })
 }
 
 

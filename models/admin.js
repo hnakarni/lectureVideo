@@ -24,9 +24,6 @@ const crudschema = mongoose.Schema({
     avatar :{
         type : String,
         required : true
-    },
-    sum :{
-        type : String
     }
 })
 
@@ -39,9 +36,10 @@ const storage = multer.diskStorage({
     }
 })
 
-crudschema.statics.uploadedAvatar = multer({storage : storage}).fields([{name : 'avatar', maxCount : 1}, {
-    name : "images", maxCount : 10
-}]);
+// crudschema.statics.uploadedAvatar = multer({storage : storage}).fields([{name : 'avatar', maxCount : 1}, {
+//     name : "images", maxCount : 10
+// }]);
+crudschema.statics.uploadedAvatar = multer({storage : storage}).single('avatar');
 
 crudschema.statics.AVATAR_PATH = avatarPath;
 
